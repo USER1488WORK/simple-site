@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гайд по сборке ПК</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #2A2F38;
+            color: #E0E6ED;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: #2A2F38;
+            padding: 30px;
+            text-align: center;
+            font-size: 36px;
+            color: #6B48FF;
+            text-transform: uppercase;
+            border-bottom: 4px solid #A68FFF;
+            box-shadow: 0 0 20px rgba(107, 72, 255, 0.5);
+            animation: headerGlow 3s infinite alternate;
+        }
+
+        @keyframes headerGlow {
+            0% { box-shadow: 0 0 20px rgba(107, 72, 255, 0.5); }
+            100% { box-shadow: 0 0 30px rgba(107, 72, 255, 0.8); }
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #2A2F38;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .nav a {
+            color: #A68FFF;
+            text-decoration: none;
+            margin: 10px 20px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #6B48FF;
+            text-shadow: 0 0 10px rgba(107, 72, 255, 0.7);
+        }
+
+        .section {
+            background: #2A2F38;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #6B48FF;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(107, 72, 255, 0.3);
+        }
+
+        h1 {
+            color: #6B48FF;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #A68FFF;
+            font-size: 22px;
+        }
+
+        p, ul, ol {
+            font-size: 16px;
+            color: #E0E6ED;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: '▶';
+            color: #6B48FF;
+            position: absolute;
+            left: -20px;
+        }
+
+        .guide-images img, .guide-images video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 3px solid #A68FFF;
+            transition: transform 0.3s ease;
+        }
+
+        .guide-images img:hover, .guide-images video:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #2A2F38;
+            color: #A68FFF;
+            font-size: th14px;
+            border-top: 4px solid #6B48FF;
+        }
+
+        @media (max-width: 768px) {
+            .header { font-size: 28px; padding: 20px; }
+            .nav a { font-size: 16px; margin: 8px 15px; }
+            .section { padding: 20px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .header { font-size: 22px; padding: 15px; }
+            .nav a { font-size: 14px; margin: 5px 10px; }
+            .section { padding: 15px; }
+            h1 { font-size: 20px; }
+            h2 { font-size: 18px; }
+            p, ul, ol { font-size: 14px; }
+            .guide-images video { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Гайд по сборке ПК</div>
+
+    <div class="nav">
+        <a href="#intro">Введение</a>
+        <a href="#tools">Инструменты</a>
+        <a href="#components">Комплектующие</a>
+        <a href="#assembly">Сборка</a>
+        <a href="#errors">Ошибки</a>
+        <a href="#setup">Настройка</a>
+    </div>
+
+    <div class="container">
+        <div id="intro" class="section">
+            <h1>Введение</h1>
+            <p>Сборка собственного ПК — это не только способ сэкономить деньги, но и возможность создать машину, идеально подходящую для твоих задач: игр, работы или творчества. В этом гайде мы разберём всё по полочкам — от подготовки инструментов до устранения ошибок. Поехали!</p>
+        </div>
+
+        <div id="tools" class="section">
+            <h1>Инструменты</h1>
+            <p>Для сборки ПК тебе понадобится минимальный набор инструментов, но важно, чтобы всё было под рукой:</p>
+            <ul>
+                <li><strong>Крестовая отвёртка (Phillips)</strong> — стандартный размер PH2 подойдёт для большинства винтов в корпусе и на плате.</li>
+                <li><strong>Антистатический браслет</strong> — защита от статического электричества, которое может повредить чипы (альтернатива — заземление через корпус).</li>
+                <li><strong>Термопаста</strong> — нужна, если на кулере нет преднанесённого слоя; выбирай качественную, например, Arctic MX-4.</li>
+                <li><strong>Кабельные стяжки</strong> — для аккуратной укладки проводов внутри корпуса.</li>
+                <li><strong>Маленький фонарик</strong> — поможет разглядеть мелкие разъёмы в тёмных уголках корпуса.</li>
+            </ul>
+            <div class="guide-images">
+                <img src="88.jpg" alt="Инструменты">
+            </div>
+        </div>
+
+        <div id="components" class="section">
+            <h1>Комплектующие</h1>
+            <p>Выбор железа — ключевой этап. Вот что тебе нужно и на что обратить внимание:</p>
+            <ul>
+                <li><strong>Процессор (CPU)</strong> — Intel i5/i7 или AMD Ryzen 5/7 для баланса цены и производительности. Убедись, что сокет совпадает с материнской платой.</li>
+                <li><strong>Материнская плата</strong> — подбирай под чипсет (например, B550 для Ryzen) и с нужными слотами (PCIe 4.0, M.2).</li>
+                <li><strong>Оперативная память (RAM)</strong> — 16 ГБ (2x8 ГБ) с частотой 3200 МГц — оптимально для 2025 года.</li>
+                <li><strong>Видеокарта (GPU)</strong> — NVIDIA RTX 3060/4060 или AMD RX 6700 XT для игр в 1080p/1440p.</li>
+                <li><strong>Блок питания (PSU)</strong> — 550-750 Вт, 80+ Bronze или Gold, чтобы был запас мощности.</li>
+                <li><strong>Корпус</strong> — с хорошей вентиляцией (mesh-панель спереди) и поддержкой кабель-менеджмента.</li>
+                <li><strong>Накопители</strong> — SSD NVMe (500 ГБ-1 ТБ) для ОС и игр + HDD (2-4 ТБ) для хранения данных.</li>
+            </ul>
+            <div class="guide-images">
+                <img src="skobka1488.jpg" alt="Комплектующие">
+            </div>
+        </div>
+
+        <div id="assembly" class="section">
+            <h1>Процесс сборки</h1>
+            <h2>Подробные шаги</h2>
+            <p>Собирать ПК лучше в таком порядке, чтобы ничего не повредить:</p>
+            <ol>
+                <li><strong>Установка CPU</strong> — аккуратно вставь процессор в сокет, ориентируясь по метке (треугольник в углу), не дави сильно.</li>
+                <li><strong>Кулер</strong> — нанеси термопасту размером с горошину, закрепи кулер (стоковый или башенный) по инструкции.</li>
+                <li><strong>RAM</strong> — вставь модули в слоты (обычно 2 и 4), до щелчка, проверь совместимость в мануале платы.</li>
+                <li><strong>Материнка в корпус</strong> — закрепи плату на стойки (обычно 6-9 винтов), не перетягивай.</li>
+                <li><strong>Питание</strong> — подключи 24-pin к плате и 8-pin к CPU, уложи кабели аккуратно.</li>
+                <li><strong>GPU и накопители</strong> — вставь видеокарту в PCIe-слот, закрепи винтом; SSD/HDD установи в отсеки.</li>
+                <li><strong>Финал</strong> — подключи переднюю панель (power, reset, LED), USB и аудиоразъёмы, закрой корпус.</li>
+            </ol>
+            <div class="guide-images">
+                <video controls width="600">
+                    <source src="1488.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео. Вот <a href="assembly-guide.mp4">ссылка</a> на скачивание.
+                </video>
+            </div>
+        </div>
+
+        <div id="errors" class="section">
+            <h1>Ошибки после сборки</h1>
+            <h2>Частые проблемы и как их решить</h2>
+            <p>После сборки могут возникнуть проблемы. Вот что делать:</p>
+            <ul>
+                <li><strong>ПК не включается</strong> — проверь кабель питания, переключатель на БП, подключение кнопки power к материнке (см. мануал).</li>
+                <li><strong>Нет изображения</strong> — убедись, что кабель монитора в GPU, а не в плате; проверь плотность установки GPU и RAM.</li>
+                <li><strong>Синий экран (BSOD)</strong> — обнови BIOS с сайта производителя платы, проверь частоту RAM в BIOS (XMP).</li>
+                <li><strong>Перегрев</strong> — убедись, что кулер вращается (подключи к CPU_FAN), проверь температуру в BIOS (выше 90°C — плохо).</li>
+                <li><strong>Нет звука</strong> — проверь драйверы (Realtek или производителя платы), убедись, что колонки в нужном разъёме.</li>
+                <li><strong>Не грузится ОС</strong> — проверь порядок загрузки в BIOS, убедись, что флешка с ОС записана правильно (Rufus).</li>
+            </ul>
+            <div class="guide-images">
+                <img src="1488.jpg" alt="Ошибка BSOD">
+            </div>
+        </div>
+
+        <div id="setup" class="section">
+            <h1>Настройка</h1>
+            <p>После сборки нужно настроить систему для работы:</p>
+            <ul>
+                <li><strong>BIOS</strong> — включи ПК, нажми Del/F2, выставь порядок загрузки (флешка первая), включи XMP для RAM.</li>
+                <li><strong>Установка ОС</strong> — вставь флешку с Windows 10/11 (запиши через Rufus), следуй инструкциям установщика.</li>
+                <li><strong>Драйверы</strong> — скачай с сайта производителя GPU (NVIDIA/AMD), чипсета (AMD/Intel) и аудио; обнови через GeForce Experience или Adrenalin.</li>
+                <li><strong>Программы</strong> — установи HWMonitor для мониторинга температур, MSI Afterburner для разгона GPU (опционально).</li>
+            </ul>
+            <div class="images.jpg">
+                <img src="images.jpg" alt="Настройка">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 Гайд по сборке ПК</div>
+</body>
+</html>
